@@ -46,7 +46,7 @@ function toLeft() {
 };
 
 var showTimer = null;
-var delayMs = 500;
+var delayMs = 1500;
 
 function playSlideShow() {
   if (showTimer === null) {
