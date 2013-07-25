@@ -1,4 +1,5 @@
 var carousel = document.getElementById('carousel');
+var position = parseInt(carousel.style.marginLeft);
 
 // Buttons
 var next = document.getElementById('next');
@@ -25,3 +26,16 @@ previous.onmouseout = function(event) {
 };
 
 // Create onclick events to advance the images
+next.onclick = function(event) {
+  var position = parseInt(carousel.style.marginLeft);
+  if (position > - 1224) {
+    carousel.style.marginLeft = position - 612 + 'px';
+  } else {
+    carousel.style.marginLeft = 0 + 'px';
+  }
+};
+
+previous.onclick = function(event) {
+  var position = parseInt(carousel.style.marginLeft);
+  carousel.style.marginLeft = position + 612 + 'px';
+};
