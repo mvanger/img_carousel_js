@@ -49,3 +49,9 @@ body {
 #previous {
 
 }
+
+#slideshow {
+  left: auto;
+  right: 280px;
+  top: 90%;
+}
