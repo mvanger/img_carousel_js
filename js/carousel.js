@@ -46,7 +46,7 @@ function toLeft() {
 };
 
 var showTimer = null;
-var delayMs = 2000;
+var delayMs = 500;
 
 function playSlideShow() {
   if (showTimer === null) {
@@ -54,6 +54,12 @@ function playSlideShow() {
   }
 }
 
+function pauseSlideShow() {
+  window.clearInterval(showTimer);
+  showTimer = null;
+}
+
 next.addEventListener("click", toRight);
 previous.addEventListener("click", toLeft);
 slideshow.addEventListener("click", playSlideShow);
+pause.addEventListener("click", pauseSlideShow);
