@@ -37,5 +37,9 @@ next.onclick = function(event) {
 
 previous.onclick = function(event) {
   var position = parseInt(carousel.style.marginLeft);
-  carousel.style.marginLeft = position + 612 + 'px';
+  if (position < 0) {
+    carousel.style.marginLeft = position + 612 + 'px';
+  } else {
+    carousel.style.marginLeft = -1224 + 'px';
+  }
 };
